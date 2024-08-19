@@ -1,0 +1,256 @@
+:root {
+  --purple: #6358dc;
+  --purple-darkmode: #a8a0ff;
+  --white: #ffffff;
+  --offWhite: #e7e7e7;
+  --grayNav: #828282;
+  --dark: #333;
+  --light: #e6e6e6;
+  --start: #6c5ce7;
+  --startHover: #4a4a8e;
+  --finish: #fbb55b;
+  --finishHover: #cda169;
+  --pause: #0089b6;
+  --pauseHover: #015a78;
+  --darkCard: #454545;
+  --txt-col: #9b9b9b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  background-color: var(--offWhite);
+  color: var(--txt-col);
+}
+
+/* NavBar */
+
+.upper {
+  background-color: white;  
+  display: flex;
+  height: 95px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.03);
+}
+a {
+  text-decoration: none;
+}
+.logo {
+  display: flex;
+  padding-left: 50px;
+  align-items: center;
+}
+.my-logo {
+  color: var(--purple);
+  font-weight: 900;
+}
+.my-link {
+  padding-left: 35%;
+}
+.my-link:visited {
+  color: var(--purple);
+}
+
+.date-time {
+  display: flex;
+  padding-right: 50px;
+}
+
+.my-link,
+.date-time {
+  color: var(--grayNav);
+  font-weight: bolder;
+  font-size: small;
+}
+#date {
+  padding-right: 20px;
+  position: relative;
+}
+#date:after {
+  content: "|";
+  position: absolute;
+  font-weight: lighter;
+  padding-left: 10px;
+}
+
+/* Div Under NavBar */
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.profile-container {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 1200px;
+  height: 1000px;
+  margin: auto;
+  align-items: center;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-pic {
+  margin: 35px 10px 10px 35px;
+}
+
+.profile-pic img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+}
+
+.profile-info h2 {
+  margin: 0;
+  color: var(--purple);
+  font-size: 24px;
+}
+
+.profile-info p {
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
+/* The Mode */
+
+.theme-switcher {
+  margin-left: auto;
+}
+
+.theme-switcher label {
+  font-size: 14px;
+  color: #4a4a4a;
+  margin-right: 10px;
+}
+
+.colors {
+  margin: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.color {
+  width: 25px;
+  height: 25px;
+  border: 2px solid #000;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.color.dark {
+  background-color: var(--dark);
+}
+
+.color.light {
+  background-color: var(--light);
+  border-color: var(--light);
+}
+
+/* Task */
+
+.work-timer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 800px;
+  margin: 100px 100px 20px 20px;
+  padding: 20px;
+}
+
+.work-timer p {
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+
+.timer {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.start-work,
+.finish-work {
+  height: 45px;
+  background-color: var(--start);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.start-work:hover {
+  background-color: var(--startHover);
+}
+
+.finish-work {
+  background-color: var(--finish);
+}
+
+.finish-work:hover {
+  background-color: var(--finishHover);
+}
+
+.resume {
+  background-color: var(--start);
+}
+.resume:hover {
+  background-color: var(--startHover);
+}
+
+.pause {
+  background-color: var(--pause);
+}
+.pause:hover {
+  background-color: var(--pauseHover);
+}
+
+/* Dark Theme */
+
+.dark-theme {
+  background-color: var(--dark);
+  color: var(--offWhite);
+}
+
+.profile-container.dark-theme {
+  background-color: var(--darkCard);
+}
+
+label.dark-theme {
+  color: var(--offWhite);
+}
+
+.upper.dark-theme {
+  background-color: var(--darkCard);
+  color: var(--offWhite)
+}
+
+.work-timer.dark-theme {
+  background-color: var(--darkCard);
+}
+
+.profile-container.dark-theme .profile-info h2,
+.upper.dark-theme .logo h2 {
+  color: var(--purple-darkmode);
+}
+
+.upper.dark-theme .my-link, .upper.dark-theme .date-time{
+  color: var(--offWhite)
+}
+
